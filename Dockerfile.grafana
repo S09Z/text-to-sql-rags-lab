@@ -1,0 +1,8 @@
+# Dockerfile
+
+# Use the official Grafana image
+FROM grafana/grafana:8.5.0
+
+# (Optional) Copy custom dashboards and plugins
+# COPY dashboards/ /var/lib/grafana/dashboards/
+# COPY plugins/ /var/lib/grafana/plugins/

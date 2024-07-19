@@ -1,0 +1,13 @@
+# Dockerfile
+
+# Use the official Apache Airflow image
+FROM apache/airflow:2.5.1
+
+# Install additional Python packages
+RUN pip install pandas pyarrow fastavro datahub sqlalchemy psycopg2-binary
+
+# Set the Airflow home environment variable
+ENV AIRFLOW_HOME=/opt/airflow
+
+# Copy the DAGs to the Airflow home directory
+COPY dags/ $AIRFLOW_HOME/dags/
