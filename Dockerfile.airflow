@@ -1,7 +1,5 @@
-# Dockerfile
-
-# Use the official Apache Airflow image
-FROM apache/airflow:2.5.1
+# Dockerfile.airflow
+FROM apache/airflow:2.9.3
 
 # Install additional Python packages
 RUN pip install pandas pyarrow fastavro datahub sqlalchemy psycopg2-binary

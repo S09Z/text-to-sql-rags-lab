@@ -1,10 +1,13 @@
 import unittest
 from airflow.models import DagBag
+import os
 
 class TestExampleDag(unittest.TestCase):
 
-    def setUp(self):
-        self.dagbag = DagBag()
+    @classmethod
+    def setUpClass(cls):
+        os.environ['AIRFLOW__CORE__UNIT_TEST_MODE'] = 'True'
+        cls.dagbag = DagBag()
 
     def test_dag_loaded(self):
         dag_id = 'example_dag'
