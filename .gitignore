@@ -1,0 +1,9 @@
+storage/
+
+.env
+.venv
+venv/
+
+.mypy*
+
+.vscode
